@@ -1,0 +1,78 @@
+[
+  {
+    "elements": [
+      {
+        "id": "emirates-features;bill-wants-to-travel-from-dxb-to-lhr",
+        "keyword": "Scenario",
+        "line": 7,
+        "name": "Bill wants to travel from DXB to LHR",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "name": "that Bill has decided to check available flights",
+            "result": {
+              "status": "passed",
+              "duration": 338242
+            },
+            "line": 8,
+            "match": {
+              "location": "/Users/133307/Downloads/Emirates_TestAutomation/src/step_definitions/user_travel_step_def.js:10"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "name": "he looks at a return trip from \"DXB\" to \"LHR\" leaving one week from now",
+            "result": {
+              "status": "passed",
+              "duration": 2704448
+            },
+            "line": 9,
+            "match": {
+              "location": "/Users/133307/Downloads/Emirates_TestAutomation/src/step_definitions/user_travel_step_def.js:16"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "name": "he should be shown the cheapest return ticket from DXB to LHR",
+            "result": {
+              "status": "passed",
+              "duration": 634701
+            },
+            "line": 10,
+            "match": {
+              "location": "/Users/133307/Downloads/Emirates_TestAutomation/src/step_definitions/user_travel_step_def.js:31"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "After ",
+            "result": {
+              "status": "passed",
+              "duration": 188798
+            },
+            "hidden": true,
+            "match": {
+              "location": "/Users/133307/Downloads/Emirates_TestAutomation/src/support/hooks.js:29"
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@UI",
+            "line": 6
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
+    "id": "emirates-features",
+    "keyword": "Feature",
+    "line": 1,
+    "name": "Emirates Features",
+    "tags": [],
+    "uri": "/Users/133307/Downloads/Emirates_TestAutomation/src/features/emirates.feature"
+  }
+]

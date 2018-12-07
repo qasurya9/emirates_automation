@@ -27,6 +27,27 @@ var TestUtils = function() {
         });
   }
 
+  this.nextWeekDate = function () {
+    var today = new Date();
+    today.setDate(today.getDate() + 7);
+    var dd = today.getDate(); // next week date
+    var mm = today.getMonth(); //January is 0!
+    var yyyy = today.getFullYear();
+
+    if(dd<10) {
+        dd = '0'+dd
+    }
+
+    if(mm<10) {
+        mm = '0'+mm
+    }
+
+    var nextWeekDate = dd +'\''+ mm +'\''+ yyyy;
+    nextWeekDate = nextWeekDate.replace("'", "").replace("'", "");
+    return nextWeekDate;
+  }
+
+
   this.waitForThePageLoad = function(){
       browser.driver.sleep(defaultWaitTime);
   };
@@ -35,8 +56,11 @@ var TestUtils = function() {
     browser.driver.sleep(time);
   }
 
-  this.scrollIntoView = function(el) {
-    browser.executeScript(function(el){el.scrollIntoView();},el.getWebElement);
+  this.scrollIntoViewAndClickElement = function(el) {
+      browser.executeScript('window.scrollTo(0,500);').then(function(){
+          el.click();
+          console.log('--- Scrolled down ---');
+      });
   };
 
   this.scrollUp = function() {

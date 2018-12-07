@@ -21,7 +21,7 @@ var hooks = function () {
 
     this.registerHandler('BeforeFeature', { timeout: 20 * 2000 }, function (event) {
         browser.ignoreSynchronization = true;
-        browser.manage().window().maximize();
+        // browser.manage().window().maximize();
         browser.manage().timeouts().setScriptTimeout(80000);
         return browser.get(browser.params.baseUrlName);
     });
